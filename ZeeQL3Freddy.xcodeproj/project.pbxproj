@@ -121,12 +121,12 @@
 		E85121CB1E96848000552BF0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "ZeeZide GmbH";
 				TargetAttributes = {
 					E85121D21E96848000552BF0 = {
 						CreatedOnToolsVersion = 8.2.1;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};

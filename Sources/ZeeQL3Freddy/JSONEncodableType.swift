@@ -7,10 +7,33 @@
 //
 
 import ZeeQL
+import Freddy
 
 public enum JSONAttributeType {
   case array, dictionary, double, int, string, bool, null
 }
+
+public extension JSON {
+  
+  public func getValue(at key: JSONPathType, type: JSONAttributeType)
+                throws -> JSONEncodableType?
+  {
+    // Note: this doesn't support a path because Freddy doesn't have a matching
+    //       array method
+    switch type {
+      /*#if false
+      case .array:      return try getArray     (at: key)
+      case .dictionary: return try getDictionary(at: key)
+      #endif*/
+      case .double:     return try getDouble    (at: key)
+      case .int:        return try getInt       (at: key)
+      case .string:     return try getString    (at: key)
+      case .bool:       return try getBool      (at: key)
+      default:          return try getString    (at: key)
+    }
+  }
+}
+
 
 public protocol JSONEncodableType {
   

@@ -10,6 +10,7 @@
 		E85121E41E96858500552BF0 /* ActiveRecordJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85121E31E96858500552BF0 /* ActiveRecordJSON.swift */; };
 		E85121E81E9686CC00552BF0 /* Freddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E85121E61E9686CC00552BF0 /* Freddy.framework */; };
 		E85121E91E9686CC00552BF0 /* libZeeQL.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E85121E71E9686CC00552BF0 /* libZeeQL.dylib */; };
+		E8E7793D1F05ABE6003B4682 /* JSONEncodableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E7793C1F05ABE6003B4682 /* JSONEncodableType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		E85121E31E96858500552BF0 /* ActiveRecordJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActiveRecordJSON.swift; path = ZeeQL3Freddy/ActiveRecordJSON.swift; sourceTree = "<group>"; };
 		E85121E61E9686CC00552BF0 /* Freddy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Freddy.framework; path = "../../../../../../private/tmp/DerivedData/Samples-cojpcxfuvlchxdgxljebsbkvpqxf/Build/Products/Debug/Freddy.framework"; sourceTree = "<group>"; };
 		E85121E71E9686CC00552BF0 /* libZeeQL.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libZeeQL.dylib; path = "../../../../../../private/tmp/DerivedData/Samples-cojpcxfuvlchxdgxljebsbkvpqxf/Build/Products/Debug/libZeeQL.dylib"; sourceTree = "<group>"; };
+		E8E7793C1F05ABE6003B4682 /* JSONEncodableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JSONEncodableType.swift; path = ZeeQL3Freddy/JSONEncodableType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				E85121E31E96858500552BF0 /* ActiveRecordJSON.swift */,
+				E8E7793C1F05ABE6003B4682 /* JSONEncodableType.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E85121E41E96858500552BF0 /* ActiveRecordJSON.swift in Sources */,
+				E8E7793D1F05ABE6003B4682 /* JSONEncodableType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

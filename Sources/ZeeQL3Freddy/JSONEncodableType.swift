@@ -1,0 +1,87 @@
+//
+//  JSONEncodableType.swift
+//  ZeeQL3Freddy
+//
+//  Created by Helge Hess on 29.06.17.
+//  Copyright © 2017 ZeeZide GmbH. All rights reserved.
+//
+
+import ZeeQL
+
+public enum JSONAttributeType {
+  case array, dictionary, double, int, string, bool, null
+}
+
+public protocol JSONEncodableType {
+  
+  var jsonAttributeType : JSONAttributeType { get }
+  
+}
+
+extension String : JSONEncodableType {
+  public var jsonAttributeType : JSONAttributeType { return .string }
+}
+
+#if false // TODO:
+extension Data    : JSONEncodableType {}
+extension Date    : JSONEncodableType {}
+extension Decimal : JSONEncodableType {}
+#endif
+
+extension Int     : JSONEncodableType {
+  public var jsonAttributeType : JSONAttributeType { return .int }
+}
+extension Int16   : JSONEncodableType {
+  public var jsonAttributeType : JSONAttributeType { return .int }
+}
+extension Int32   : JSONEncodableType {
+  public var jsonAttributeType : JSONAttributeType { return .int }
+}
+extension Int64   : JSONEncodableType {
+  public var jsonAttributeType : JSONAttributeType { return .int }
+}
+extension Float   : JSONEncodableType {
+  public var jsonAttributeType : JSONAttributeType { return .double }
+}
+extension Double  : JSONEncodableType {
+  public var jsonAttributeType : JSONAttributeType { return .double }
+}
+extension Bool    : JSONEncodableType {
+  public var jsonAttributeType : JSONAttributeType { return .bool }
+}
+
+import struct Foundation.URL
+
+extension URL     : JSONEncodableType {
+  public var jsonAttributeType : JSONAttributeType { return .string }
+}
+
+public extension Attribute {
+  
+  public var jsonAttributeType : JSONAttributeType {
+    // TODO: support a userInfo key to override the mapping
+    
+    if let v = self.valueType {
+      if let av = v as? JSONEncodableType {
+        return av.jsonAttributeType
+      }
+    }
+    
+    if let et = self.externalType?.uppercased(), !et.isEmpty {
+      if et.hasPrefix("VARCHAR") || et.hasPrefix("CHAR") || et == "TEXT" {
+        return .string
+      }
+      if et.hasPrefix("INT") || et.hasPrefix("SMALLINT") ||
+         et.hasPrefix("BIGINT") || et == "SERIAL" || et == "BIGSERIAL"
+      {
+        return .int
+      }
+      if et == "REAL" || et.hasPrefix("DOUBLE") {
+        return .double
+      }
+    }
+    
+    return .string // TBD: or make it optional?
+  }
+}
+

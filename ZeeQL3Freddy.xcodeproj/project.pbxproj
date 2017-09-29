@@ -16,7 +16,6 @@
 /* Begin PBXFileReference section */
 		E85121D31E96848000552BF0 /* libZeeQL3Freddy.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libZeeQL3Freddy.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		E85121DC1E9684C400552BF0 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
-		E85121DD1E9684C400552BF0 /* Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Framework.xcconfig; sourceTree = "<group>"; };
 		E85121DE1E9684C400552BF0 /* SharedLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SharedLibrary.xcconfig; sourceTree = "<group>"; };
 		E85121DF1E9684C400552BF0 /* SwiftShared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SwiftShared.xcconfig; sourceTree = "<group>"; };
 		E85121E21E9684FE00552BF0 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -71,7 +70,6 @@
 			isa = PBXGroup;
 			children = (
 				E85121DC1E9684C400552BF0 /* Base.xcconfig */,
-				E85121DD1E9684C400552BF0 /* Framework.xcconfig */,
 				E85121DE1E9684C400552BF0 /* SharedLibrary.xcconfig */,
 				E85121DF1E9684C400552BF0 /* SwiftShared.xcconfig */,
 			);

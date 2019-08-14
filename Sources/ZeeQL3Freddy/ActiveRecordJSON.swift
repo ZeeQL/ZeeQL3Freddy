@@ -3,7 +3,7 @@
 //  ZeeQL3JSON
 //
 //  Created by Helge Hess on 06/04/17.
-//  Copyright © 2017 ZeeZide GmbH. All rights reserved.
+//  Copyright © 2017-2019 ZeeZide GmbH. All rights reserved.
 //
 
 import ZeeQL
@@ -17,7 +17,7 @@ extension ZeeQL.ActiveRecord : Freddy.JSONEncodable {
 
 public extension ActiveRecordType {
   
-  public func toJSON() -> JSON {
+  func toJSON() -> JSON {
     return entity.toJSON(object: self)
   }
   
@@ -25,10 +25,7 @@ public extension ActiveRecordType {
 
 public extension Entity {
   
-  public func toJSON(object : ZeeQL.KeyValueCodingType,
-                     brief  : Bool = false)
-               -> JSON
-  {
+  func toJSON(object: ZeeQL.KeyValueCodingType, brief: Bool = false) -> JSON {
     var json = [ String : JSON ]()
     
     for attr in attributes {

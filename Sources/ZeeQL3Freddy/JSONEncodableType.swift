@@ -3,7 +3,7 @@
 //  ZeeQL3Freddy
 //
 //  Created by Helge Hess on 29.06.17.
-//  Copyright © 2017 ZeeZide GmbH. All rights reserved.
+//  Copyright © 2017-2019 ZeeZide GmbH. All rights reserved.
 //
 
 import ZeeQL
@@ -15,8 +15,8 @@ public enum JSONAttributeType {
 
 public extension JSON {
   
-  public func getValue(at key: JSONPathType, type: JSONAttributeType)
-                throws -> JSONEncodableType?
+  func getValue(at key: JSONPathType, type: JSONAttributeType)
+         throws -> JSONEncodableType?
   {
     // Note: this doesn't support a path because Freddy doesn't have a matching
     //       array method
@@ -81,7 +81,7 @@ extension URL     : JSONEncodableType {
 
 public extension Attribute {
   
-  public var jsonAttributeType : JSONAttributeType {
+  var jsonAttributeType : JSONAttributeType {
     // TODO: support a userInfo key to override the mapping
     
     if let v = self.valueType {

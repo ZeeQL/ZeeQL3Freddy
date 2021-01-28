@@ -10,7 +10,7 @@ let package = Package(
   ],
   dependencies: [
     .package(url: "https://github.com/ZeeQL/ZeeQL3.git",
-             from: "0.8.0"),
+             from: "0.9.3"),
     .package(url: "https://github.com/modswift/Freddy.git",
              from: "3.0.58")
   ],
